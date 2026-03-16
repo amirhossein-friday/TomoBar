@@ -4,6 +4,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var timer: TBTimer
     @ObservedObject private var launchAtLogin = LaunchAtLogin.observable
+    @State private var tokenInput: String = ""
 
     var body: some View {
         VStack {
@@ -120,6 +121,45 @@ struct SettingsView: View {
             .onChange(of: timer.appLanguage) { newValue in
                 LocalizationManager.shared.applyLanguageSettings(for: newValue)
                 LocalizationManager.shared.showRestartAlert()
+            }
+            Divider().padding(.vertical, 4)
+
+            // Todoist section
+            Text("Todoist")
+                .font(.headline)
+                .frameInfinityLeading()
+
+            if timer.todoist.tokenStatus == .connected {
+                HStack {
+                    Text("Connected")
+                        .foregroundColor(.green)
+                        .frameInfinityLeading()
+                    Button("Disconnect") {
+                        timer.todoist.disconnect()
+                        tokenInput = ""
+                    }
+                }
+                Toggle(isOn: $timer.todoist.showTaskInMenuBar) {
+                    Text("Show task in menu bar")
+                        .frameInfinityLeading()
+                }
+                .toggleStyle(.switch)
+            } else {
+                HStack {
+                    SecureField("API Token", text: $tokenInput)
+                    Button("Verify") {
+                        timer.todoist.verifyToken(tokenInput)
+                    }
+                    .disabled(tokenInput.isEmpty || timer.todoist.tokenStatus == .verifying)
+                }
+                if timer.todoist.tokenStatus == .verifying {
+                    Text("Verifying...")
+                        .foregroundColor(.secondary)
+                }
+                if timer.todoist.tokenStatus == .invalid {
+                    Text("Invalid token")
+                        .foregroundColor(.red)
+                }
             }
             Spacer().frame(minHeight: 0)
         }

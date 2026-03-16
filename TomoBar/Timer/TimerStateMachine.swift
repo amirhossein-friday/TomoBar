@@ -338,6 +338,7 @@ extension TBTimer {
         if ctx.fromState == .work {
             player.stopTicking()
             player.playDing()
+            todoist.logPomodoro(workMinutes: currentPresetInstance.workIntervalLength)
         }
 
         // Check if not auto-transition

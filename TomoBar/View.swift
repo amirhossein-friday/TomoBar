@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum ChildView {
-    case intervals, settings, shortcuts, sounds
+    case tasks, intervals, settings, shortcuts, sounds
 }
 
 struct TBPopoverView: View {
@@ -38,6 +38,29 @@ struct TBPopoverView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            // Task bar
+            Button {
+                activeChildView = .tasks
+            } label: {
+                HStack {
+                    if timer.todoist.hasSelectedTask {
+                        Text(timer.todoist.selectedTaskName)
+                            .lineLimit(1)
+                            .frameInfinityLeading()
+                        if timer.todoist.pomodoroCountForSelectedTask > 0 {
+                            Text("🍅 \(timer.todoist.pomodoroCountForSelectedTask)")
+                        }
+                    } else {
+                        Text("Select a task...")
+                            .foregroundColor(.secondary)
+                            .frameInfinityLeading()
+                    }
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .padding(.vertical, 4)
+
             HStack(alignment: .center, spacing: 4) {
                 Button {
                     timer.startStop()
@@ -119,6 +142,7 @@ struct TBPopoverView: View {
             }
 
             Picker("", selection: $activeChildView) {
+                Text("Tasks").tag(ChildView.tasks)
                 Text(NSLocalizedString("View.intervals.label",
                                        comment: "Intervals label")).tag(ChildView.intervals)
                 Text(NSLocalizedString("View.settings.label",
@@ -134,6 +158,8 @@ struct TBPopoverView: View {
 
             GroupBox {
                 switch activeChildView {
+                case .tasks:
+                    TasksView(activeTab: $activeChildView).environmentObject(timer)
                 case .intervals:
                     IntervalsView().environmentObject(timer)
                 case .settings:

@@ -1,5 +1,6 @@
 import SwiftState
 import SwiftUI
+import Combine
 
 enum StartWithValues: String, CaseIterable, DropdownDescribable, Codable {
     case work, rest
@@ -62,6 +63,7 @@ class TBTimer: ObservableObject {
         userChoiceHandler: handleUserChoiceAction
     )
     public var dnd = TBDoNotDisturb()
+    public var todoist = TodoistManager()
     public var currentWorkInterval: Int = 0
 
     var finishTime: Date!
@@ -71,6 +73,7 @@ class TBTimer: ObservableObject {
     var pausedTimeElapsed: TimeInterval = 0  // Elapsed time when paused
     var adjustTimerWorkItem: DispatchWorkItem?  // For debouncing timer adjustments
     let appNapPrevent = AppNapPrevent()
+    private var cancellables = Set<AnyCancellable>()
     @Published var paused: Bool = false
     @Published var timeLeftString: String = ""
     @Published var timer: DispatchSourceTimer?
@@ -99,6 +102,10 @@ class TBTimer: ObservableObject {
     init() {
         setupStateMachine()
         timerFormatter.unitsStyle = .positional
+
+        todoist.objectWillChange.sink { [weak self] _ in
+            self?.objectWillChange.send()
+        }.store(in: &cancellables)
 
         setupKeyboardShortcuts()
 
