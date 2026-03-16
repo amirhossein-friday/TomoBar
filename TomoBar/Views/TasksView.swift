@@ -20,7 +20,8 @@ struct TasksView: View {
                 taskListView
             }
         }
-        .padding(4)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
     }
 
     // MARK: - No Token State
@@ -110,7 +111,7 @@ struct TasksView: View {
 
     private var taskList: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 2) {
                 ForEach(filteredGroups, id: \.project.id) { group in
                     if selectedProjectId == "__all__" {
                         Text(group.project.name)

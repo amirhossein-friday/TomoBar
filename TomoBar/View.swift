@@ -207,6 +207,7 @@ struct TBPopoverView: View {
                 .buttonStyle(.plain)
                 .keyboardShortcut("q")
             }
+            
         }
         .frame(width: getLocalizedWidth())
         .fixedSize()
