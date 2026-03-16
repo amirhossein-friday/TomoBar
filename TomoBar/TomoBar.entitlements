@@ -18,5 +18,7 @@
 		<string>org.yurov.tomobar-spks</string>
 		<string>org.yurov.tomobar-spki</string>
 	</array>
+	<key>com.apple.security.network.client</key>
+	<true/>
 </dict>
 </plist>
