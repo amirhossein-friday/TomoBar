@@ -9,7 +9,6 @@
 import Foundation
 import SwiftUI
 
-@MainActor
 class TodoistManager: ObservableObject {
 
     // MARK: - TokenStatus
