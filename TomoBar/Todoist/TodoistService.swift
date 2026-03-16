@@ -10,7 +10,7 @@ import Foundation
 /// URLSession-based API client for Todoist REST API v2
 class TodoistService {
     private let token: String
-    private let baseURL = "https://api.todoist.com/rest/v2"
+    private let baseURL = "https://api.todoist.com/api/v1"
 
     init(token: String) {
         self.token = token
@@ -29,7 +29,8 @@ class TodoistService {
             throw TodoistServiceError.invalidResponse
         }
 
-        return try JSONDecoder().decode([TodoistProject].self, from: data)
+        let paged = try JSONDecoder().decode(TodoistPagedResponse<TodoistProject>.self, from: data)
+        return paged.results
     }
 
     /// Fetch all tasks from Todoist
@@ -45,7 +46,8 @@ class TodoistService {
             throw TodoistServiceError.invalidResponse
         }
 
-        return try JSONDecoder().decode([TodoistTask].self, from: data)
+        let paged = try JSONDecoder().decode(TodoistPagedResponse<TodoistTask>.self, from: data)
+        return paged.results
     }
 
     /// Post a comment to a task

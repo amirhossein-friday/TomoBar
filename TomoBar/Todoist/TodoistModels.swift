@@ -25,3 +25,8 @@ struct TodoistTask: Codable, Identifiable {
         case projectId = "project_id"
     }
 }
+
+/// Wrapper for Todoist API v1 paginated responses
+struct TodoistPagedResponse<T: Decodable>: Decodable {
+    let results: [T]
+}
