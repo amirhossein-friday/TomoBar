@@ -11,6 +11,7 @@
 		587E947357720E2EA2CBB413 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF64F554F1C157AD592EBE3 /* Defaults.swift */; };
 		6747514A2B0AF3150924CF96 /* SoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9E7231FCE6FB874D7A9BD /* SoundsView.swift */; };
 		763F9392E9F75F609C681E14 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC70D513A84DBA5365D66B /* BaseLayout.swift */; };
+		83684B7080140E661FE8DDBE /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F497B803D2D99FEE6DBE6 /* KeychainHelper.swift */; };
 		84106AE8296E0D7020FA7430 /* ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A330993DE806C801A86031 /* ViewComponents.swift */; };
 		867F41E283A2E99E37D402E1 /* TodoistModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D420DABEB60C976E1421A /* TodoistModels.swift */; };
 		8A21B78C27EE31A20009E5DB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B78B27EE31A20009E5DB /* App.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		0650CBA06EAD3CA9018708D6 /* Big.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Big.swift; sourceTree = "<group>"; };
 		0CAC8EAFBA04788F15B696AF /* Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		2D4F497B803D2D99FEE6DBE6 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainHelper.swift; path = TomoBar/Todoist/KeychainHelper.swift; sourceTree = SOURCE_ROOT; };
 		51543A78C6944F560C7CA005 /* CustomComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
 		5507621A49B050B10DCCCC7D /* ControlsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		57A330993DE806C801A86031 /* ViewComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewComponents.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				7A4D420DABEB60C976E1421A /* TodoistModels.swift */,
+				2D4F497B803D2D99FEE6DBE6 /* KeychainHelper.swift */,
 			);
 			name = Todoist;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				F86C72692C46404A1D4A7933 /* Custom.swift in Sources */,
 				587E947357720E2EA2CBB413 /* Defaults.swift in Sources */,
 				867F41E283A2E99E37D402E1 /* TodoistModels.swift in Sources */,
+				83684B7080140E661FE8DDBE /* KeychainHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
