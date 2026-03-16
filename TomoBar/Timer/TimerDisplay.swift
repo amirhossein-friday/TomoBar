@@ -31,6 +31,13 @@ extension TBTimer {
     }
 
     func updateStatusBar() {
+        let taskSuffix: String = {
+            guard todoist.hasSelectedTask && todoist.showTaskInMenuBar else { return "" }
+            let name = todoist.selectedTaskName
+            let truncated = name.count > 20 ? String(name.prefix(20)) + "..." : name
+            return " " + truncated
+        }()
+
         // Handle different show timer modes for status bar display
         switch showTimerMode {
         case .disabled:
@@ -42,12 +49,16 @@ extension TBTimer {
             if timer == nil || paused {
                 setTitle(nil)
             } else {
-                setTitle(timeLeftString)
+                setTitle(timeLeftString + taskSuffix)
             }
 
         case .always:
             // Show timer always (including idle and paused states)
-            setTitle(timeLeftString)
+            if timer != nil && !paused {
+                setTitle(timeLeftString + taskSuffix)
+            } else {
+                setTitle(timeLeftString)
+            }
         }
     }
 
