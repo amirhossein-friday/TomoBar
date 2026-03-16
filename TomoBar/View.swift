@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum ChildView {
-    case intervals, settings, shortcuts, sounds
+    case tasks, intervals, settings, shortcuts, sounds
 }
 
 struct TBPopoverView: View {
@@ -119,6 +119,7 @@ struct TBPopoverView: View {
             }
 
             Picker("", selection: $activeChildView) {
+                Text("Tasks").tag(ChildView.tasks)
                 Text(NSLocalizedString("View.intervals.label",
                                        comment: "Intervals label")).tag(ChildView.intervals)
                 Text(NSLocalizedString("View.settings.label",
@@ -134,6 +135,8 @@ struct TBPopoverView: View {
 
             GroupBox {
                 switch activeChildView {
+                case .tasks:
+                    TasksView(activeTab: $activeChildView).environmentObject(timer)
                 case .intervals:
                     IntervalsView().environmentObject(timer)
                 case .settings:

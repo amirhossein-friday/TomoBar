@@ -37,6 +37,7 @@
 		D11A2F32A03594642ED16FEA /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51543A78C6944F560C7CA005 /* CustomComponents.swift */; };
 		D5B04BB98B5D8E60FC52E60C /* TodoistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50944D18A4E4D88F41F41DAA /* TodoistService.swift */; };
 		E6EE380A7510B028577A56D2 /* Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF2400FC73D912CD4D3D4 /* Small.swift */; };
+		F0D64923ABF3EC402BBCAE79 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF014B0ABFA001F636290484 /* TasksView.swift */; };
 		F86C72692C46404A1D4A7933 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC8EAFBA04788F15B696AF /* Custom.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		8AEE49AE2AA75A5E00243D2F /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9DFC70D513A84DBA5365D66B /* BaseLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
 		9EB9405B2B07605900198AD2 /* Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		AF014B0ABFA001F636290484 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TasksView.swift; path = TomoBar/Views/TasksView.swift; sourceTree = SOURCE_ROOT; };
 		BD13C3DD2EAE6F310022623C /* Notify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		BDE6ED392EC109CE00D20AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDE6ED5F2EC117EC00D20AEC /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				CCBF4F6785F7F6D7B70DAE7D /* SettingsView.swift */,
 				5507621A49B050B10DCCCC7D /* ControlsView.swift */,
 				7BD9E7231FCE6FB874D7A9BD /* SoundsView.swift */,
+				AF014B0ABFA001F636290484 /* TasksView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				83684B7080140E661FE8DDBE /* KeychainHelper.swift in Sources */,
 				D5B04BB98B5D8E60FC52E60C /* TodoistService.swift in Sources */,
 				22EB4DA4BA97D631CAD4BBC4 /* TodoistManager.swift in Sources */,
+				F0D64923ABF3EC402BBCAE79 /* TasksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
