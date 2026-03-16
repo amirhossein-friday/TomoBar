@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22EB4DA4BA97D631CAD4BBC4 /* TodoistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C494AC4AB2B549F5B4E7871 /* TodoistManager.swift */; };
 		41866048537C0B32516927A0 /* Big.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0650CBA06EAD3CA9018708D6 /* Big.swift */; };
 		587E947357720E2EA2CBB413 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF64F554F1C157AD592EBE3 /* Defaults.swift */; };
 		6747514A2B0AF3150924CF96 /* SoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9E7231FCE6FB874D7A9BD /* SoundsView.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0650CBA06EAD3CA9018708D6 /* Big.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Big.swift; sourceTree = "<group>"; };
+		0C494AC4AB2B549F5B4E7871 /* TodoistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoistManager.swift; path = TomoBar/Todoist/TodoistManager.swift; sourceTree = SOURCE_ROOT; };
 		0CAC8EAFBA04788F15B696AF /* Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
 		2D4F497B803D2D99FEE6DBE6 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainHelper.swift; path = TomoBar/Todoist/KeychainHelper.swift; sourceTree = SOURCE_ROOT; };
 		50944D18A4E4D88F41F41DAA /* TodoistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoistService.swift; path = TomoBar/Todoist/TodoistService.swift; sourceTree = SOURCE_ROOT; };
@@ -158,6 +160,7 @@
 				7A4D420DABEB60C976E1421A /* TodoistModels.swift */,
 				2D4F497B803D2D99FEE6DBE6 /* KeychainHelper.swift */,
 				50944D18A4E4D88F41F41DAA /* TodoistService.swift */,
+				0C494AC4AB2B549F5B4E7871 /* TodoistManager.swift */,
 			);
 			name = Todoist;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				867F41E283A2E99E37D402E1 /* TodoistModels.swift in Sources */,
 				83684B7080140E661FE8DDBE /* KeychainHelper.swift in Sources */,
 				D5B04BB98B5D8E60FC52E60C /* TodoistService.swift in Sources */,
+				22EB4DA4BA97D631CAD4BBC4 /* TodoistManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
