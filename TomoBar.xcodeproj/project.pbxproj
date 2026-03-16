@@ -12,6 +12,7 @@
 		6747514A2B0AF3150924CF96 /* SoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9E7231FCE6FB874D7A9BD /* SoundsView.swift */; };
 		763F9392E9F75F609C681E14 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC70D513A84DBA5365D66B /* BaseLayout.swift */; };
 		84106AE8296E0D7020FA7430 /* ViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A330993DE806C801A86031 /* ViewComponents.swift */; };
+		867F41E283A2E99E37D402E1 /* TodoistModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D420DABEB60C976E1421A /* TodoistModels.swift */; };
 		8A21B78C27EE31A20009E5DB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B78B27EE31A20009E5DB /* App.swift */; };
 		8A21B79027EE31A30009E5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A21B78F27EE31A30009E5DB /* Assets.xcassets */; };
 		8A7403A027FA19BB00E7F90B /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 8A74039F27FA19BB00E7F90B /* LaunchAtLogin */; };
@@ -44,6 +45,7 @@
 		57A330993DE806C801A86031 /* ViewComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewComponents.swift; sourceTree = "<group>"; };
 		5B4DF2400FC73D912CD4D3D4 /* Small.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Small.swift; sourceTree = "<group>"; };
 		72EF953E117A47BB4284982E /* IntervalsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalsView.swift; sourceTree = "<group>"; };
+		7A4D420DABEB60C976E1421A /* TodoistModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoistModels.swift; path = TomoBar/Todoist/TodoistModels.swift; sourceTree = SOURCE_ROOT; };
 		7BD9E7231FCE6FB874D7A9BD /* SoundsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundsView.swift; sourceTree = "<group>"; };
 		7DF64F554F1C157AD592EBE3 /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		8A21B78827EE31A20009E5DB /* TomoBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomoBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,9 +68,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BD2F1ED92ED18FBE0084E1E1 /* Localizations */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localizations; sourceTree = "<group>"; };
 		BDBF71A32EAFD925004B0E08 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
 		BDBF71A92EAFD940004B0E08 /* Timer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Timer; sourceTree = "<group>"; };
-				BD2F1ED92ED18FBE0084E1E1 /* Localizations */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localizations; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				F5B12F090B3E600D5806B7D4 /* Views */,
 				CDC4770E64C7D24E1818FED7 /* View.swift */,
 				7DF64F554F1C157AD592EBE3 /* Defaults.swift */,
+				B766463EA28EF381B1577221 /* Todoist */,
 			);
 			path = TomoBar;
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B766463EA28EF381B1577221 /* Todoist */ = {
+			isa = PBXGroup;
+			children = (
+				7A4D420DABEB60C976E1421A /* TodoistModels.swift */,
+			);
+			name = Todoist;
 			sourceTree = "<group>";
 		};
 		BDA289B52EA9732A0089FF69 /* Notifications */ = {
@@ -343,11 +354,11 @@
 				41866048537C0B32516927A0 /* Big.swift in Sources */,
 				F86C72692C46404A1D4A7933 /* Custom.swift in Sources */,
 				587E947357720E2EA2CBB413 /* Defaults.swift in Sources */,
+				867F41E283A2E99E37D402E1 /* TodoistModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
 
 /* Begin XCBuildConfiguration section */
 		8A21B79527EE31A30009E5DB /* Debug */ = {
