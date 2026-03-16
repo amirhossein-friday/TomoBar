@@ -38,6 +38,29 @@ struct TBPopoverView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            // Task bar
+            Button {
+                activeChildView = .tasks
+            } label: {
+                HStack {
+                    if timer.todoist.hasSelectedTask {
+                        Text(timer.todoist.selectedTaskName)
+                            .lineLimit(1)
+                            .frameInfinityLeading()
+                        if timer.todoist.pomodoroCountForSelectedTask > 0 {
+                            Text("🍅 \(timer.todoist.pomodoroCountForSelectedTask)")
+                        }
+                    } else {
+                        Text("Select a task...")
+                            .foregroundColor(.secondary)
+                            .frameInfinityLeading()
+                    }
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .padding(.vertical, 4)
+
             HStack(alignment: .center, spacing: 4) {
                 Button {
                     timer.startStop()
