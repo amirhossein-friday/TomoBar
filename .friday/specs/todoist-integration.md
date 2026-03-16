@@ -171,7 +171,7 @@ Add `com.apple.security.network.client` to `TomoBar.entitlements` (outbound netw
 | `Timer/TimerStateMachine.swift` | Call TodoistManager on work interval completion |
 | `Timer/TimerDisplay.swift` | Append task name to status bar |
 | `Timer.swift` | Add TodoistManager as dependency |
-| `Views/ViewComponents.swift` | Add Tasks case to ChildView enum |
+| `View.swift` | Add Tasks case to ChildView enum (enum is defined here, not ViewComponents) |
 
 ## Out of Scope (v1)
 
