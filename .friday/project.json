@@ -1,0 +1,7 @@
+{
+  "owner": "friday",
+  "orchestrator": "dev-orchestrator",
+  "created": "2026-03-16",
+  "repo": "amirhossein-friday/TomoBar",
+  "description": "TomoBar fork with Todoist integration - pick tasks, run pomodoros, log sessions"
+}
