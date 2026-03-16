@@ -201,7 +201,7 @@ class TodoistManager: ObservableObject {
     /// Log a completed pomodoro as a comment on the selected Todoist task.
     /// Non-blocking: fires a detached Task for the API call with one retry.
     func logPomodoro(workMinutes: Int) {
-        guard hasSelectedTask, hasToken else { return }
+        guard workMinutes > 0, hasSelectedTask, hasToken else { return }
 
         let count = incrementPomodoroCount()
         let comment = "\u{1F345} Pomodoro #\(count) completed (\(workMinutes) min)"
