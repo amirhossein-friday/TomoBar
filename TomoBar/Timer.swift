@@ -63,7 +63,7 @@ class TBTimer: ObservableObject {
         userChoiceHandler: handleUserChoiceAction
     )
     public var dnd = TBDoNotDisturb()
-    public let todoist = TodoistManager()
+    public var todoist = TodoistManager()
     public var currentWorkInterval: Int = 0
 
     var finishTime: Date!
